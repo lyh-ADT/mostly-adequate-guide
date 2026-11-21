@@ -1,4 +1,4 @@
-// We consider Car objects of the following shape:
+// 我们考虑下面这种形状的 Car 对象：
 //
 //   {
 //     name: 'Aston Martin One-77',
@@ -7,7 +7,7 @@
 //     in_stock: true,
 //   }
 //
-// Use `compose()` to rewrite the function below.
+// 用 `compose()` 重写下面的函数。
 
 
 // isLastInStock :: [Car] -> Boolean

@@ -1,50 +1,42 @@
-# Mostly Adequate Exercises
+# Mostly Adequate 练习
 
-## Overview
+## 概述
 
-All exercises from the book can be completed either:
+书里的所有练习都可以用两种方式完成：
 
-- in browser (using the version of the book published on [gitbook.io](https://mostly-adequate.gitbooks.io/mostly-adequate-guide/))
-- in your editor & terminal, using `npm`
+- 在浏览器里（使用发布在 [gitbook.io](https://mostly-adequate.gitbooks.io/mostly-adequate-guide/) 上的版本）
+- 在你的编辑器和终端里，用 `npm`
 
-In every folder named `ch**` from this `exercises/` folder, you'll find three types of files:
+在 `exercises/` 文件夹下每个名为 `ch**` 的目录里，你会发现三类文件：
 
-- exercises
-- solutions
-- validations
+- 练习
+- 解答
+- 校验
 
-Exercises are structured with a statement in comment, followed by an incomplete
-or incorrect function. For example, `exercise_a` from `ch04` looks like this:
+练习的结构是：先用注释写一段题目说明，然后给出一个不完整或者不正确的函数。比如 `ch04` 里的 `exercise_a` 长这样：
 
 
 ```js
-// Refactor to remove all arguments by partially applying the function.
+// 重构它，通过部分应用那个函数来去掉所有参数。
 
 // words :: String -> [String]
 const words = str => split(' ', str);
 ```
 
-Following the statement, your goal is to refactor the given function `words`. Once done, 
-your proposal can be verified by running:
+按照说明，你的目标就是重构给定的 `words` 函数。做完之后，可以运行下面的命令来验证你的方案：
 
 ```
 npm run ch04
 ```
 
-Remember to first install node dependencies being at the recommended node version of the project. More on this on [the main README of the project](../README.md#about-the-nodejs-version).
+记得先用项目推荐的 node 版本装好 node 依赖。更多内容见[项目主 README](../README.md#关于-nodejs-版本)。
 
-Alternatively, you can also have a peak at the corresponding solution file: in this case
-`solution_a.js`. 
+另外，你也可以瞄一眼对应的解答文件：在这个例子里就是 `solution_a.js`。
 
-> The files `validation_*.js` aren't really part of the exercises but are used
-> internally to verify your proposal and, offer hints when adequate. The curious 
-> reader may have a look at them :).
+> `validation_*.js` 这些文件其实不算练习的一部分，它们是内部用来校验你的方案、并在合适的时候给出提示的。好奇的读者可以瞄一眼 :)。
 
-Now go and learn some functional programming λ!
+现在，去学点函数式编程吧 λ！
 
-## About the Appendixes
+## 关于附录
 
-Important notice: the exercise runner takes care of bringing all
-data-structures and functions from the appendixes into scope. Therefore, you
-may assume that any function present in the appendix is just available for you
-to use! Amazing, isn't it? 
+重要提醒：练习运行器会负责把附录里的所有数据结构 and 函数都带进作用域。因此，你可以假定附录里出现的任何函数都直接可用！神奇吧？

@@ -1,4 +1,4 @@
-// Given the following helper functions:
+// 给定下面这些辅助函数：
 //
 //   // showWelcome :: User -> String
 //   const showWelcome = compose(concat('Welcome '), prop('name'));
@@ -10,7 +10,7 @@
 //       : left('Your account is not active');
 //   };
 //
-// Write a function that uses `checkActive` and `showWelcome` to grant access or return the error.
+// 写一个函数，用 `checkActive` 和 `showWelcome` 来放行，或者返回错误。
 
 // eitherWelcome :: User -> Either String String
 const eitherWelcome = undefined;

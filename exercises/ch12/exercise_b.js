@@ -1,5 +1,5 @@
-// Using traversable, and the `validate` function, update `startGame` (and its signature)
-// to only start the game if all players are valid
+// 用 traversable 和 `validate` 函数改写 `startGame`（连同它的签名），
+// 让游戏只在所有玩家都合法时才开局。
 //
 //   // validate :: Player -> Either String Player
 //   validate = player => (player.name ? Either.of(player) : left('must have name'));

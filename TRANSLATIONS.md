@@ -1,4 +1,4 @@
-# Available Translations
+# 可用译本
 
 * [中文版 (Chinese)](https://github.com/llh911001/mostly-adequate-guide-chinese)  by Linghao Li @llh911001
 * [Русский (Russian)](https://github.com/MostlyAdequate/mostly-adequate-guide-ru)  by Maksim Filippov @maksimf
@@ -11,6 +11,6 @@
 * [bahasa Indonesia (Indonesian)](https://github.com/MostlyAdequate/mostly-adequate-guide-id) by Ahmad Naufal Mukhtar @anaufalm
 
 
-## Creating new Translations
+## 创建新译本
 
-See [Creating new translations](CONTRIBUTING.md#Translations)
+见[创建新译本](CONTRIBUTING.md#译本)

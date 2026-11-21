@@ -1,6 +1,6 @@
-// Write the isomorphisms between String and [Char].
+// 写出 String 和 [Char] 之间的同构。
 //
-// As a reminder, the following functions are available in the exercise's context:
+// 提醒一下，练习的上下文里提供了下面这些函数：
 //
 //   split :: String -> String -> [String]
 //   intercalate :: String -> [String] -> String

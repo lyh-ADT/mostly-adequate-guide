@@ -1,13 +1,10 @@
-# Appendix A: Essential Functions Support
+# 附录 A：必备函数支持
 
-In this appendix, you'll find some basic JavaScript implementations of various functions
-described in the book. Keep in mind that these implementations may not be the fastest or the
-most efficient implementation out there; they *solely serve an educational purpose*.
+在这个附录里，你会找到书中讲到的各种函数的一些基础 JavaScript 实现。请记住，这些实现未必是最快或最高效的；它们*纯粹是为了教学目的而存在*。
 
-In order to find functions that are more production-ready, have a peek at
-[ramda](https://ramdajs.com/), [lodash](https://lodash.com/), or [folktale](http://folktale.origamitower.com/).
+如果你想找更适合生产环境的函数，可以看看 [ramda](https://ramdajs.com/)、[lodash](https://lodash.com/) 或 [folktale](http://folktale.origamitower.com/)。
 
-Note that some functions also refer to algebraic structures defined in the [Appendix B](./appendix_b.md)
+注意，有些函数还会引用[附录 B](./appendix_b.md) 里定义的代数结构。
 
 ## always
 

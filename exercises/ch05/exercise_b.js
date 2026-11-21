@@ -1,8 +1,8 @@
-// Considering the following function:
+// 考虑下面这个函数：
 //
 //   const average = xs => reduce(add, 0, xs) / xs.length;
 //
-// Use the helper function `average` to refactor `averageDollarValue` as a composition.
+// 用辅助函数 `average` 把 `averageDollarValue` 重构成一个组合。
 
 // averageDollarValue :: [Car] -> Int
 const averageDollarValue = (cars) => {

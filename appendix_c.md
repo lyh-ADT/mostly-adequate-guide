@@ -1,14 +1,10 @@
-# Appendix C: Pointfree Utilities
+# 附录 C：无值风格工具函数
 
-In this appendix, you'll find pointfree versions of rather classic JavaScript functions
-described in the book. All of the following functions are seemingly available in exercises, as
-part of the global context. Keep in mind that these implementations may not be the fastest or
-the most efficient implementation out there; they *solely serve an educational purpose*.
+在这个附录里，你会找到书中讲到的那些经典 JavaScript 函数的无值风格（pointfree）版本。下面这些函数似乎都作为全局上下文的一部分，在练习里可以直接使用。请记住，这些实现未必是最快或最高效的；它们*纯粹是为了教学目的而存在*。
 
-In order to find functions that are more production-ready, have a peek at
-[ramda](https://ramdajs.com/), [lodash](https://lodash.com/), or [folktale](http://folktale.origamitower.com/).
+如果你想找更适合生产环境的函数，可以看看 [ramda](https://ramdajs.com/)、[lodash](https://lodash.com/) 或 [folktale](http://folktale.origamitower.com/)。
 
-Note that functions refer to the `curry` & `compose` functions defined in [Appendix A](./appendix_a.md)
+注意，这些函数引用了[附录 A](./appendix_a.md) 里定义的 `curry` 和 `compose`。
 
 ## add 
 

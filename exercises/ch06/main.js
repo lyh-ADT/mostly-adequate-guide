@@ -4,14 +4,14 @@ const jquery = CDN('jquery/3.0.0-rc1/jquery.min');
 
 requirejs.config({ paths: { ramda, jquery } });
 require(['jquery', 'ramda'], ($, { compose, curry, map, prop }) => {
-  // -- Utils ----------------------------------------------------------
+  // -- 工具 ----------------------------------------------------------
   const Impure = {
     trace: curry((tag, x) => { console.log(tag, x); return x; }), // eslint-disable-line no-console
     getJSON: curry((callback, url) => $.getJSON(url, callback)),
     setHtml: curry((sel, html) => $(sel).html(html)),
   };
 
-  // -- Pure -----------------------------------------------------------
+  // -- 纯函数 ---------------------------------------------------------
   const host = 'api.flickr.com';
   const path = '/services/feeds/photos_public.gne';
   const query = t => `?tags=${t}&format=json&jsoncallback=?`;
@@ -22,7 +22,7 @@ require(['jquery', 'ramda'], ($, { compose, curry, map, prop }) => {
   const mediaUrls = compose(map(mediaUrl), prop('items'));
   const images = compose(map(img), mediaUrls);
 
-  // -- Impure ---------------------------------------------------------
+  // -- 不纯函数 -------------------------------------------------------
   const render = compose(Impure.setHtml('#js-main'), images);
   const app = compose(Impure.getJSON(render), url);
 

@@ -1,13 +1,10 @@
-# Appendix B: Algebraic Structures Support
+# 附录 B：代数结构支持
 
-In this appendix, you'll find some basic JavaScript implementations of various algebraic
-structures described in the book. Keep in mind that these implementations may not be the fastest or the
-most efficient implementation out there; they *solely serve an educational purpose*.
+在这个附录里，你会找到书中讲到的各种代数结构的一些基础 JavaScript 实现。请记住，这些实现未必是最快或最高效的；它们*纯粹是为了教学目的而存在*。
 
-In order to find structures that are more production-ready, have a peek at [folktale](http://folktale.origamitower.com/)
-or [fantasy-land](https://github.com/fantasyland).
+如果你想找更适合生产环境的结构，可以看看 [folktale](http://folktale.origamitower.com/) 或 [fantasy-land](https://github.com/fantasyland)。
 
-Note that some methods also refer to functions defined in the [Appendix A](./appendix_a.md)
+注意，有些方法还会引用[附录 A](./appendix_a.md) 里定义的函数。
 
 ## Compose
 
@@ -21,17 +18,17 @@ const createCompose = curry((F, G) => class Compose {
     return `Compose(${inspect(this.$value)})`;
   }
 
-  // ----- Pointed (Compose F G)
+  // ----- Pointed（Compose F G）
   static of(x) {
     return new Compose(F(G(x)));
   }
 
-  // ----- Functor (Compose F G)
+  // ----- Functor（Compose F G）
   map(fn) {
     return new Compose(this.$value.map(x => x.map(fn)));
   }
 
-  // ----- Applicative (Compose F G)
+  // ----- Applicative（Compose F G）
   ap(f) {
     return f.map(this.$value);
   }
@@ -47,7 +44,7 @@ class Either {
     this.$value = x;
   }
 
-  // ----- Pointed (Either a)
+  // ----- Pointed（Either a）
   static of(x) {
     return new Right(x);
   }
@@ -74,17 +71,17 @@ class Left extends Either {
     return `Left(${inspect(this.$value)})`;
   }
 
-  // ----- Functor (Either a)
+  // ----- Functor（Either a）
   map() {
     return this;
   }
 
-  // ----- Applicative (Either a)
+  // ----- Applicative（Either a）
   ap() {
     return this;
   }
 
-  // ----- Monad (Either a)
+  // ----- Monad（Either a）
   chain() {
     return this;
   }
@@ -93,7 +90,7 @@ class Left extends Either {
     return this;
   }
 
-  // ----- Traversable (Either a)
+  // ----- Traversable（Either a）
   sequence(of) {
     return of(this);
   }
@@ -124,17 +121,17 @@ class Right extends Either {
     return `Right(${inspect(this.$value)})`;
   }
 
-  // ----- Functor (Either a)
+  // ----- Functor（Either a）
   map(fn) {
     return Either.of(fn(this.$value));
   }
 
-  // ----- Applicative (Either a)
+  // ----- Applicative（Either a）
   ap(f) {
     return f.map(this.$value);
   }
 
-  // ----- Monad (Either a)
+  // ----- Monad（Either a）
   chain(fn) {
     return fn(this.$value);
   }
@@ -143,7 +140,7 @@ class Right extends Either {
     return this.$value;
   }
 
-  // ----- Traversable (Either a)
+  // ----- Traversable（Either a）
   sequence(of) {
     return this.traverse(of, identity);
   }
@@ -303,7 +300,7 @@ class Map {
       .reduce((acc, k) => fn(acc, this.$value[k], k), zero);
   }
 
-  // ----- Functor (Map a)
+  // ----- Functor（Map a）
   map(fn) {
     return this.reduceWithKeys(
       (m, v, k) => m.insert(k, fn(v)),
@@ -311,7 +308,7 @@ class Map {
     );
   }
 
-  // ----- Traversable (Map a)
+  // ----- Traversable（Map a）
   sequence(of) {
     return this.traverse(of, identity);
   }
@@ -328,8 +325,7 @@ class Map {
 
 ## Maybe
 
-> Note that `Maybe` could also be defined in a similar fashion as we did for `Either` with two 
-> child classes `Just` and `Nothing`. This is simply a different flavor.
+> 注意，`Maybe` 也可以像我们定义 `Either` 那样，用 `Just` 和 `Nothing` 两个子类来实现。这只是口味不同罢了。
 
 ```js
 class Maybe {
@@ -400,22 +396,22 @@ class Task {
     return new Task((reject, _) => reject(x));
   }
 
-  // ----- Pointed (Task a)
+  // ----- Pointed（Task a）
   static of(x) {
     return new Task((_, resolve) => resolve(x));
   }
 
-  // ----- Functor (Task a)
+  // ----- Functor（Task a）
   map(fn) {
     return new Task((reject, resolve) => this.fork(reject, compose(resolve, fn)));
   }
 
-  // ----- Applicative (Task a)
+  // ----- Applicative（Task a）
   ap(f) {
     return this.chain(fn => f.map(fn));
   }
 
-  // ----- Monad (Task a)
+  // ----- Monad（Task a）
   chain(fn) {
     return new Task((reject, resolve) => this.fork(reject, x => fn(x).fork(reject, resolve)));
   }

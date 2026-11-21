@@ -1,4 +1,4 @@
-// Write a natural transformation that converts `Either b a` to `Maybe a`
+// 写一个自然变换，把 `Either b a` 转成 `Maybe a`。
 
 // eitherToMaybe :: Either b a -> Maybe a
 const eitherToMaybe = undefined;

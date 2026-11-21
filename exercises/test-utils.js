@@ -15,7 +15,7 @@ const {
 } = require('./support');
 
 
-/* -------- Internal -------- */
+/* -------- 内部实现 -------- */
 
 const filenameRe = base => new RegExp(`${base}_([a-z]).js`);
 
@@ -34,7 +34,7 @@ const evalFiles = compose(eval, mconcat(''), map(readFile)); // eslint-disable-l
 const listToMap = xs => xs.reduce((m, [k, v]) => m.set(k, v), new Map());
 
 
-/* -------- Utils -------- */
+/* -------- 工具 -------- */
 
 const readExercises = (ch, sections = ['exercise', 'solution', 'validation']) => {
   const folder = path.join(__dirname, ch);
@@ -72,7 +72,7 @@ const runSolutions = compose(defineSpecs('solution'), readExercises);
 const runExercises = compose(defineSpecs('exercise'), readExercises);
 
 
-/* -------- Cli -------- */
+/* -------- 命令行 -------- */
 
 if (process.argv.length > 2 && process.argv[1] === __filename) {
   const usage = `Usage: test-utils new
@@ -104,7 +104,7 @@ describe('Exercises Chapter ${chapter}', () => {
     ctx.fatal([msg, usage].join('\n\n'));
   });
 
-  // NOTE Override the `getUsage` method of the cli which is... not satisfactory.
+  // NOTE 覆盖 cli 的 `getUsage` 方法，因为它的用法说明……实在不怎么样。
   cli.getUsage = () => { console.error(usage); cli.exit(0); }; // eslint-disable-line no-console
 
   cli.parse({
@@ -150,7 +150,7 @@ describe('Exercises Chapter ${chapter}', () => {
 }
 
 
-/* -------- Exports -------- */
+/* -------- 导出 -------- */
 
 module.exports = {
   readExercises,

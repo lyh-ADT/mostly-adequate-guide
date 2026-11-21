@@ -1,4 +1,4 @@
-// Refactor `fastestCar` using `compose()` and other functions in pointfree-style.
+// 用 `compose()` 和其他函数以无值风格（pointfree）重构 `fastestCar`。
 
 // fastestCar :: [Car] -> String
 const fastestCar = (cars) => {

@@ -1,114 +1,84 @@
-## FAQ
+## 常见问题
 
-- [Why are snippets written sometimes with semicolons and sometimes
-  without?](#why-are-snippets-written-sometimes-with-semicolons-and-sometimes-without)
-- [Aren't external libraries like _ (ramda) or $ (jquery) making calls impure?](#arent-external-libraries-like-_-ramda-or--jquery-making-calls-impure)
-- [What is the meaning of `f a` in signature?](#what-is-the-meaning-of-f-a-in-signature)
-- [Is there any "real world" examples available?](#is-there-any-real-world-examples-available)
-- [Why does the book uses ES5? Is any ES6 version available?](#why-does-the-book-uses-es5-is-any-es6-version-available)
-- [What the heck is that reduce function about?](#what-the-heck-is-that-reduce-function-about)
-- [Wouldn't you use a simplified English rather than the current style?](#wouldnt-you-use-a-simplified-english-rather-than-the-current-style)
-- [What is Either? What is Future? What is Task?](#what-is-either-what-is-future-what-is-task)
-- [Where do map, filter, compose ... methods come from?](#where-do-map-filter-compose--methods-come-from)
+- [为什么代码片段有时带分号，有时不带？](#为什么代码片段有时带分号有时不带)
+- [像 _（ramda）或 $（jquery）这样的外部库，不会让调用变得不纯吗？](#像-_ramda或-jquery这样的外部库不会让调用变得不纯吗)
+- [类型签名里的 `f a` 是什么意思？](#类型签名里的-f-a-是什么意思)
+- [有没有什么“真实世界”的例子？](#有没有什么真实世界的例子)
+- [这本书为什么用 ES5？有 ES6 版本吗？](#这本书为什么用-es5有-es6-版本吗)
+- [那个 reduce 函数到底是什么鬼？](#那个-reduce-函数到底是什么鬼)
+- [你们就不能用简化英语吗，非得用现在这种文风？](#你们就不能用简化英语吗非得用现在这种文风)
+- [Either 是什么？Future 是什么？Task 是什么？](#either-是什么future-是什么task-是什么)
+- [map、filter、compose……这些方法是从哪来的？](#mapfiltercompose这些方法是从哪来的)
 
-### Why are snippets written sometimes with semicolons and sometimes without?
+### 为什么代码片段有时带分号，有时不带？
 
-> see [#6]
+> 见 [#6]
 
-There are two schools in JavaScript, people who use them, and people who don't.  We've made the
-choice here to use them, and now, we strive to be consistent with that choice. If some are
-missing, please let us know and we will take care of the oversight.
+JavaScript 有两大流派：用分号的，和不用分号的。我们在这里选择了用分号，并且努力跟这个选择保持一致。要是哪里漏了分号，请告诉我们，我们会把这个疏漏补上。
 
-### Aren't external libraries like _ (ramda) or $ (jquery) making calls impure?
+### 像 _（ramda）或 $（jquery）这样的外部库，不会让调用变得不纯吗？
 
-> see [#50]
+> 见 [#50]
 
-Those dependencies are available as if they were in the global context, part of the language.
-So, no, calls can still be considered as pure.
-For further reading, have a look at [this article about
-CoEffects](http://tomasp.net/blog/2014/why-coeffects-matter/)
+这些依赖就当作语言的一部分，仿佛存在于全局上下文里。所以，不会，调用仍然可以看作纯的。
+想深入的话，可以看看[这篇关于 CoEffects 的文章](http://tomasp.net/blog/2014/why-coeffects-matter/)。
 
-### What is the meaning of `f a` in signature?
+### 类型签名里的 `f a` 是什么意思？
 
-> see [#62]
+> 见 [#62]
 
-In a signature, like:
+在像这样的签名里：
 
 `map :: Functor f => (a -> b) -> f a -> f b`
 
-`f` refers to a `functor` that could be, for instance, Maybe or IO. Thus, the signature abstracts
-the choice of that functor by using a type variable which basically means that any functor
-might be used where `f` stands as long as all `f` are of the same type (if the first `f a` in
-the signature represents a `Maybe a`, then the second one **cannot refer to** an `IO b` but
-should be a `Maybe b`. For instance:
+`f` 指的是一个`函子`（functor），比如 Maybe 或 IO。于是，签名用类型变量抽象掉了函子的具体选择，这基本上意味着：只要所有 `f` 都是同一个类型，`f` 所在的位置可以用任何函子（如果签名里第一个 `f a` 表示 `Maybe a`，那么第二个就**不能**指向 `IO b`，而应该是 `Maybe b`）。比如：
 
 ```javascript
 let maybeString = Maybe.of("Patate")
 let f = function (x) { return x.length }
 let maybeNumber = map(f, maybeString) // Maybe(6)
 
-// With the following 'refined' signature:
+// 用下面这个“精化”过的签名：
 // map :: (string -> number) -> Maybe string -> Maybe number
 ```
 
-### Is there any "real world" examples available?
+### 有没有什么“真实世界”的例子？
 
-> see [#77], [#192]
+> 见 [#77]、[#192]
 
-Should you haven't reached it yet, you may have a look at the [Chapter
-6](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch06.md) which presents a
-simple flickr application.
-Other examples are likely to come later on. By the way, feel free to share with us your
-experience!
+如果你还没读到那儿，可以看看[第 6 章](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch06.md)，里面演示了一个简单的 flickr 应用。
+其他例子以后大概还会有。顺便说一句，欢迎跟我们分享你的经验！
 
-### Why does the book uses ES5? Is any ES6 version available?
+### 这本书为什么用 ES5？有 ES6 版本吗？
 
-> see [#83], [#235]
+> 见 [#83]、[#235]
 
-The book aims at being widely accessible. It started before ES6 went out, and now, as the new
-standard is being more and more accepted, we are considering making two separated editions with
-ES5 and ES6. Members of the community are already working on the ES6 version (have a look to
-[#235] for more information).
+这本书的目标是尽可能让更多人读得懂。它动笔的时候 ES6 还没发布；现在新标准越来越被接受，我们正在考虑出两个分开的版本，一个 ES5、一个 ES6。社区成员已经在做 ES6 版本了（更多信息见 [#235]）。
 
-### What the heck is that reduce function about?
+### 那个 reduce 函数到底是什么鬼？
 
-> see [#109]
+> 见 [#109]
 
-Reduce, accumulate, fold, inject are all usual functions in functional programming used to
-combine the elements of a data structure successively. You might have a look at [this
-talk](https://www.youtube.com/watch?v=JZSoPZUoR58&ab_channel=NewCircleTraining) to get some
-more insights about the reduce function.
+Reduce、accumulate、fold、inject 都是函数式编程里常见的函数，用来把一个数据结构的元素逐个合并起来。你可以看看[这个演讲](https://www.youtube.com/watch?v=JZSoPZUoR58&ab_channel=NewCircleTraining)，对 reduce 函数会有更多了解。
 
-### Wouldn't you use a simplified English rather than the current style?
+### 你们就不能用简化英语吗，非得用现在这种文风？
 
-> see [#176]
+> 见 [#176]
 
-The book is written in its own style which contributes to make it consistent as a whole. If
-you're not familiar with English, see it as good training. Nevertheless, should you need help
-to understand the meaning sometimes, there are now [several
-translations](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/TRANSLATIONS.md)
-available that could probably help you.
+这本书有它自己的风格，这风格让全书保持统一。要是你对英语不熟，就把它当成一种很好的训练。不过，如果你有时候需要帮助才能理解意思，现在已经有[好几个译本](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/TRANSLATIONS.md)了，多半能帮上忙。
 
-### What is Either? What is Future? What is Task?
+### Either 是什么？Future 是什么？Task 是什么？
 
-> see [#194]
+> 见 [#194]
 
-We introduce all of those structures throughout the book. Therefore, you won't find any use of a
-structure that hasn't previously be defined. Do not hesitate to read again some old parts if
-you ever feel uncomfortable with those types.
-A glossary/vade mecum will come at the end to synthesize all these notions.
+这些结构我们会在书里逐一介绍。所以，你不会遇到任何之前没定义过的结构。要是对这些类型感到别扭，别犹豫，回去把前面的部分再读一遍。
+最后会有一个术语表/随身手册，把这些概念汇总起来。
 
-### Where do map, filter, compose ... methods come from?
+### map、filter、compose……这些方法是从哪来的？
 
-> see [#198]
+> 见 [#198]
 
-Most of the time, those methods are defined in specific vendor libraries such as `ramda` or
-`underscore`. You should also have a look at [Appendix A](./appendix_a.md), 
-[Appendix B](./appendix_b.md) and [Appendix C](./appendix_c.md) in which we define
-several implementations used for the exercises. Those functions are really
-common in functional programming and even though their implementations may vary a bit, their
-meanings remain fairly consistent between libraries.
-
+大多数时候，这些方法都定义在特定的第三方库里，比如 `ramda` 或 `underscore`。你也应该看看[附录 A](./appendix_a.md)、[附录 B](./appendix_b.md) 和[附录 C](./appendix_c.md)，我们在那里定义了几个练习里用到的实现。这些函数在函数式编程里非常常见，虽然实现可能略有不同，但它们在各个库之间的含义相当一致。
 
 [#6]: https://github.com/MostlyAdequate/mostly-adequate-guide/issues/6
 [#50]: https://github.com/MostlyAdequate/mostly-adequate-guide/issues/50

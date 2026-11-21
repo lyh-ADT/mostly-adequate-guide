@@ -1,4 +1,4 @@
-// We now consider the following functions:
+// 现在我们考虑下面这些函数：
 //
 //   // validateUser :: (User -> Either String ()) -> User -> Either String User
 //   const validateUser = curry((validate, user) => validate(user).map(_ => user));
@@ -6,11 +6,11 @@
 //   // save :: User -> IO User
 //   const save = user => new IO(() => ({ ...user, saved: true }));
 //
-// Write a function `validateName` which checks whether a user has a name longer than 3 characters
-// or return an error message. Then use `either`, `showWelcome` and `save` to write a `register`
-// function to signup and welcome a user when the validation is ok.
+// 写一个函数 `validateName`，检查用户的名字是否超过 3 个字符；
+// 否则返回一条错误信息。然后用 `either`、`showWelcome` 和 `save` 写一个 `register`
+// 函数，在验证通过时注册用户并欢迎他。
 //
-// Remember either's two arguments must return the same type.
+// 记住：either 的两个参数必须返回相同的类型。
 
 // validateName :: User -> Either String ()
 const validateName = undefined;

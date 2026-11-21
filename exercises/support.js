@@ -1,10 +1,10 @@
-// NOTE We keep named function here to leverage this in the `compose` function,
-// and later on in the validations scripts.
+// NOTE 这里保留具名函数，是为了让 `compose` 函数能利用函数名，
+// 后面验证脚本里也用得上。
 
 /* eslint-disable prefer-arrow-callback */
 
 
-/* ---------- Internals ---------- */
+/* ---------- 内部实现 ---------- */
 
 function namedAs(value, fn) {
   Object.defineProperty(fn, 'name', { value });
@@ -12,8 +12,8 @@ function namedAs(value, fn) {
 }
 
 
-// NOTE This file is loaded by gitbook's exercises plugin. When it does, there's an
-// `assert` function available in the global scope.
+// NOTE 这个文件由 gitbook 的 exercises 插件加载。加载之后，
+// 全局作用域里就会有一个 `assert` 函数。
 
 /* eslint-disable no-undef, global-require */
 if (typeof assert !== 'function' && typeof require === 'function') {
@@ -100,7 +100,7 @@ const ordinal = (i) => {
     case 3:
       return '3rd';
     default:
-      return `${i}th`; // NOTE won't get any much bigger ...
+      return `${i}th`; // NOTE 反正也不会大到哪里去……
   }
 };
 
@@ -129,11 +129,11 @@ const getType = (x) => {
 };
 
 
-/* ---------- Essential FP Functions ---------- */
+/* ---------- 基础函数式函数 ---------- */
 
-// NOTE A slightly pumped up version of `curry` which also keeps track of
-// whether a function was called partially or with all its arguments at once.
-// This is useful to provide insights during validation of exercises.
+// NOTE 一个稍微加强版的 `curry`，它还会记录一个函数到底是被部分应用了，
+// 还是一次性传齐了所有参数。
+// 这有助于在验证练习时给出更有用的提示。
 function curry(fn) {
   assert(
     typeof fn === 'function',
@@ -154,10 +154,10 @@ function curry(fn) {
 }
 
 
-// NOTE A slightly pumped up version of `compose` which also keeps track of the chain
-// of callees. In the end, a function created with `compose` holds a `callees` variable
-// with the list of all the callees' names.
-// This is useful to provide insights during validation of exercises
+// NOTE 一个稍微加强版的 `compose`，它还会记录被调用函数的链条。
+// 最终，用 `compose` 创建出来的函数会带一个 `callees` 变量，
+// 里面是所有被调用函数的名字。
+// 这有助于在验证练习时给出更有用的提示。
 function compose(...fns) {
   const n = fns.length;
 
@@ -183,7 +183,7 @@ function compose(...fns) {
 }
 
 
-/* ---------- Algebraic Data Structures ---------- */
+/* ---------- 代数数据结构 ---------- */
 
 class Either {
   static of(x) {
@@ -559,10 +559,10 @@ class Task {
   }
 }
 
-// In nodejs the existance of a class method named `inspect` will trigger a deprecation warning
-// when passing an instance to `console.log`:
+// 在 nodejs 里，如果类上有个叫 `inspect` 的方法，那么把实例传给 `console.log` 时
+// 会触发一条弃用警告：
 // `(node:3845) [DEP0079] DeprecationWarning: Custom inspection function on Objects via .inspect() is deprecated`
-// The solution is to alias the existing inspect method with the special inspect symbol exported by node
+// 解决办法是用 node 导出的那个特殊的 inspect symbol 给现有的 inspect 方法起个别名
 if (typeof module !== 'undefined' && typeof this !== 'undefined' && this.module !== module) {
   const customInspect = require('util').inspect.custom;
   const assignCustomInspect = it => it.prototype[customInspect] = it.prototype.inspect;
@@ -677,7 +677,7 @@ const liftA3 = curry(function liftA3(fn, a1, a2, a3) {
 const always = curry(function always(a, b) { return a; });
 
 
-/* ---------- Pointfree Classic Utilities ---------- */
+/* ---------- 无值风格经典工具函数 ---------- */
 
 const append = curry(function append(a, b) {
   assert(
@@ -855,14 +855,14 @@ const toUpperCase = function toUpperCase(s) {
 };
 
 
-/* ---------- Chapter 4 ---------- */
+/* ---------- 第 4 章 ---------- */
 
 const keepHighest = function keepHighest(x, y) {
   try {
     keepHighest.calledBy = keepHighest.caller;
   } catch (err) {
-    // NOTE node.js runs in strict mode and prohibit the usage of '.caller'
-    // There's a ugly hack to retrieve the caller from stack trace.
+    // NOTE node.js 运行在严格模式下，禁止使用 '.caller'
+    // 这里有个丑陋的 hack，从堆栈跟踪里把调用者捞出来。
     const [, caller] = /at (\S+)/.exec(err.stack.split('\n')[2]);
 
     keepHighest.calledBy = namedAs(caller, () => {});
@@ -872,7 +872,7 @@ const keepHighest = function keepHighest(x, y) {
 };
 
 
-/* ---------- Chapter 5 ---------- */
+/* ---------- 第 5 章 ---------- */
 
 const cars = [{
   name: 'Ferrari FF',
@@ -911,7 +911,7 @@ const average = function average(xs) {
 };
 
 
-/* ---------- Chapter 8 ---------- */
+/* ---------- 第 8 章 ---------- */
 
 const albert = {
   id: 1,
@@ -961,7 +961,7 @@ const validateUser = curry(function validateUser(validate, user) {
 });
 
 
-/* ---------- Chapter 9 ---------- */
+/* ---------- 第 9 章 ---------- */
 
 const getFile = IO.of('/home/mostly-adequate/ch09.md');
 
@@ -978,7 +978,7 @@ const validateEmail = function validateEmail(x) {
 };
 
 
-/* ---------- Chapter 10 ---------- */
+/* ---------- 第 10 章 ---------- */
 
 const localStorage = { player1: albert, player2: theresa };
 
@@ -987,7 +987,7 @@ const game = curry(function game(p1, p2) { return `${p1.name} vs ${p2.name}`; })
 const getFromCache = function getFromCache(x) { return new IO(() => localStorage[x]); };
 
 
-/* ---------- Chapter 11 ---------- */
+/* ---------- 第 11 章 ---------- */
 
 const findUserById = function findUserById(id) {
   switch (id) {
@@ -1008,7 +1008,7 @@ const findUserById = function findUserById(id) {
 const eitherToTask = namedAs('eitherToTask', either(Task.rejected, Task.of));
 
 
-/* ---------- Chapter 12 ---------- */
+/* ---------- 第 12 章 ---------- */
 
 const httpGet = function httpGet(route) { return Task.of(`json for ${route}`); };
 
@@ -1032,14 +1032,14 @@ const readfile = curry(function readfile(encoding, file) {
 });
 
 
-/* ---------- Exports ---------- */
+/* ---------- 导出 ---------- */
 
 if (typeof module === 'object') {
   module.exports = {
-    // Utils
+    // 工具
     withSpyOn,
 
-    // Essential FP helpers
+    // 基础函数式辅助函数
     always,
     compose,
     curry,
@@ -1053,7 +1053,7 @@ if (typeof module === 'object') {
     nothing,
     reject,
 
-    // Algebraic Data Structures
+    // 代数数据结构
     Either,
     IO,
     Identity,
@@ -1064,7 +1064,7 @@ if (typeof module === 'object') {
     Right,
     Task,
 
-    // Currified version of 'standard' functions
+    // “标准”函数的柯里化版本
     append,
     add,
     chain,
@@ -1092,14 +1092,14 @@ if (typeof module === 'object') {
     traverse,
     unsafePerformIO,
 
-    // Chapter 04
+    // 第 04 章
     keepHighest,
 
-    // Chapter 05
+    // 第 05 章
     cars,
     average,
 
-    // Chapter 08
+    // 第 08 章
     albert,
     gary,
     theresa,
@@ -1109,23 +1109,23 @@ if (typeof module === 'object') {
     save,
     validateUser,
 
-    // Chapter 09
+    // 第 09 章
     getFile,
     pureLog,
     addToMailingList,
     emailBlast,
     validateEmail,
 
-    // Chapter 10
+    // 第 10 章
     localStorage,
     getFromCache,
     game,
 
-    // Chapter 11
+    // 第 11 章
     findUserById,
     eitherToTask,
 
-    // Chapter 12
+    // 第 12 章
     httpGet,
     routes,
     validate,

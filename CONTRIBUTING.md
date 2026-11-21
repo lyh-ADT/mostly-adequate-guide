@@ -1,35 +1,33 @@
 
-# Contributing to Mostly Adequate Guide to Functional Programming
+# 为《Mostly Adequate Guide to Functional Programming》做贡献
 
-## Licensing
+## 许可
 
-By opening a pull request to this repository, you agree to provide your work under the [project license](LICENSE). Also, you agree to grant such license of your work as is required for the purposes of future print editions to @DrBoolean. Should your changes appear in a printed edition, you'll be included in the contributors list.
+只要向本仓库提交 pull request，你就同意在[项目许可协议](LICENSE)下提供你的作品。同时，你同意为将来印刷版之目的，按需将该作品的许可授予 @DrBoolean。如果你的改动出现在印刷版里，你将被列入贡献者名单。
 
-## Small Corrections
+## 小修正
 
-Errata and basic clarifications will be accepted if we agree that they improve the content. You can also open an issue so we can figure out how or if it needs to be addressed. If you've never done this before, the [flow guide](https://guides.github.com/introduction/flow/) might be useful.
+如果我们一致认为勘误和基础性澄清能改进内容，就会接受。你也可以开个 issue，让我们看看该如何处理、或者是否需要处理。如果你以前没做过这种事，[流程指南](https://guides.github.com/introduction/flow/)也许有用。
 
-## Questions or Clarifications
+## 问题或澄清
 
-Please, have a look at the [FAQ](FAQ.md) before you open an issue. Your question may already
-have been answered. Should you still need to ask something? Feel free to open an issue and to
-explain yourself.
+开 issue 之前，请先看看 [FAQ](FAQ.md)。你的问题可能已经有答案了。要是还需要问点什么？尽管开 issue，把你的问题说清楚。
 
-## Translations
+## 译本
 
-Translations to other languages are highly encouraged. Each official translation will be held as a separate repository in the [MostlyAdequate organization](https://github.com/MostlyAdequate) and linked from the English version book.
-Since each translation is a different repository, we can also have different maintainers for each project.
+我们非常鼓励翻译成其他语言。每个正式译本都会作为独立仓库放在 [MostlyAdequate 组织](https://github.com/MostlyAdequate)下，并从英文版书里链接过去。
+由于每个译本都是不同的仓库，我们也可以为每个项目安排不同的维护者。
 
-### Creating a New Translation Repo
+### 创建新的译本仓库
 
-In order to create a new translation, you need to follow these steps:
+要创建一个新译本，你需要按以下步骤来：
 
-* Fork the [main repo](https://github.com/MostlyAdequate/mostly-adequate-guide).
-* Add yourself to the watch list of the main repo, to keep up with changes.
-* When translating chapters, **create NEW files with suffix of your language**.
-  * For example, Spanish tranlation for `ch01.md` will be on `ch01-es.md`.
-* Open a [new issue](https://github.com/MostlyAdequate/mostly-adequate-guide/issues/new) and ask to be part of the organization.
-* Transfer the repo to the organization.
-* Merge new content from the main repo.
-* keep translating...
-* Rinse/repeat last two steps until the book is done.
+* Fork [主仓库](https://github.com/MostlyAdequate/mostly-adequate-guide)。
+* 把你自己加到主仓库的关注列表里，以便跟上改动。
+* 翻译章节时，**新建文件，并在文件名后加上你的语言后缀**。
+  * 例如，`ch01.md` 的西班牙语译本会放在 `ch01-es.md`。
+* 开一个[新 issue](https://github.com/MostlyAdequate/mostly-adequate-guide/issues/new)，申请加入组织。
+* 把仓库转给组织。
+* 合并主仓库的新内容。
+* 继续翻译……
+* 重复上面最后两步，直到整本书译完。

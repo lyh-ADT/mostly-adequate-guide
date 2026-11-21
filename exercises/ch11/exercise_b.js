@@ -1,4 +1,4 @@
-// Using `eitherToTask`, simplify `findNameById` to remove the nested `Either`.
+// 用 `eitherToTask` 简化 `findNameById`，去掉嵌套的 `Either`。
 //
 //   // eitherToTask :: Either a b -> Task a b
 //   const eitherToTask = either(Task.rejected, Task.of);

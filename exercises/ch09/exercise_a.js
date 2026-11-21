@@ -1,4 +1,4 @@
-// Considering a User object as follow:
+// 考虑下面这样一个 User 对象：
 //
 //   const user = {
 //     id: 1,
@@ -11,7 +11,7 @@
 //     },
 //   };
 //
-// Use `safeProp` and `map/join` or `chain` to safely get the street name when given a user
+// 给定一个用户，用 `safeProp` 和 `map/join` 或 `chain` 安全地取出街道名。
 
 // getStreetName :: User -> Maybe String
 const getStreetName = undefined;
