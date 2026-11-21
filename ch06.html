@@ -1,0 +1,2461 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第 06 章：示例应用 · Professor Frisby's Mostly Adequate Guide to Functional Programming（中文版）</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-exercises/exercises.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ch06.html" />
+    
+    
+    <link rel="prev" href="ch05.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ch01.html">
+            
+                <a href="ch01.html">
+            
+                    
+                    第 01 章：我们到底在干什么？
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="ch01.html">
+            
+                <a href="ch01.html#自我介绍">
+            
+                    
+                    自我介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="ch01.html">
+            
+                <a href="ch01.html#一次短暂的邂逅">
+            
+                    
+                    一次短暂的邂逅
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ch02.html">
+            
+                <a href="ch02.html">
+            
+                    
+                    第 02 章：一等函数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="ch02.html">
+            
+                <a href="ch02.html#快速回顾">
+            
+                    
+                    快速回顾
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="ch02.html">
+            
+                <a href="ch02.html#为什么偏爱一等函数？">
+            
+                    
+                    为什么偏爱一等函数？
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ch03.html">
+            
+                <a href="ch03.html">
+            
+                    
+                    第 03 章：纯函数，纯粹的快乐
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="ch03.html">
+            
+                <a href="ch03.html#哦，让我再纯洁一回">
+            
+                    
+                    哦，让我再纯洁一回
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="ch03.html">
+            
+                <a href="ch03.html#副作用可能包括">
+            
+                    
+                    副作用可能包括……
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="ch03.html">
+            
+                <a href="ch03.html#八年级数学">
+            
+                    
+                    八年级数学
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="ch03.html">
+            
+                <a href="ch03.html#为纯粹性辩护">
+            
+                    
+                    为纯粹性辩护
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="ch03.html">
+            
+                <a href="ch03.html#总结">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="ch04.html">
+            
+                <a href="ch04.html">
+            
+                    
+                    第 04 章：柯里化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="ch04.html">
+            
+                <a href="ch04.html#没有你，这日子可怎么过">
+            
+                    
+                    没有你，这日子可怎么过
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="ch04.html">
+            
+                <a href="ch04.html#不只是个双关，还有独门酱料">
+            
+                    
+                    不只是个双关，还有独门酱料
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="ch04.html">
+            
+                <a href="ch04.html#总结">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="ch04.html">
+            
+                <a href="ch04.html#练习">
+            
+                    
+                    练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="ch05.html">
+            
+                <a href="ch05.html">
+            
+                    
+                    第 05 章：用组合来编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="ch05.html">
+            
+                <a href="ch05.html#函数饲养">
+            
+                    
+                    函数饲养
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="ch05.html">
+            
+                <a href="ch05.html#无值风格">
+            
+                    
+                    无值风格
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="ch05.html">
+            
+                <a href="ch05.html#调试">
+            
+                    
+                    调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="ch05.html">
+            
+                <a href="ch05.html#范畴论">
+            
+                    
+                    范畴论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="ch05.html">
+            
+                <a href="ch05.html#小结">
+            
+                    
+                    小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="ch05.html">
+            
+                <a href="ch05.html#练习">
+            
+                    
+                    练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="ch06.html">
+            
+                <a href="ch06.html">
+            
+                    
+                    第 06 章：示例应用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="ch06.html">
+            
+                <a href="ch06.html#声明式编程">
+            
+                    
+                    声明式编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="ch06.html">
+            
+                <a href="ch06.html#一抹函数式编程的-flickr-微光">
+            
+                    
+                    一抹函数式编程的 Flickr 微光
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="ch06.html">
+            
+                <a href="ch06.html#有原则的重构">
+            
+                    
+                    有原则的重构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="ch06.html">
+            
+                <a href="ch06.html#小结">
+            
+                    
+                    小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="ch07.html">
+            
+                <a href="ch07.html">
+            
+                    
+                    第 07 章：Hindley-Milner 与我
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="ch07.html">
+            
+                <a href="ch07.html#你是什么类型？">
+            
+                    
+                    你是什么类型？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="ch07.html">
+            
+                <a href="ch07.html#来自地穴的晦涩传说">
+            
+                    
+                    来自地穴的晦涩传说
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="ch07.html">
+            
+                <a href="ch07.html#把可能性收窄">
+            
+                    
+                    把可能性收窄
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="ch07.html">
+            
+                <a href="ch07.html#白送的定理">
+            
+                    
+                    白送的定理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="ch07.html">
+            
+                <a href="ch07.html#约束">
+            
+                    
+                    约束
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="ch07.html">
+            
+                <a href="ch07.html#总结">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="ch08.html">
+            
+                <a href="ch08.html">
+            
+                    
+                    第 08 章：保鲜盒
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="ch08.html">
+            
+                <a href="ch08.html#威风凛凛的容器">
+            
+                    
+                    威风凛凛的容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="ch08.html">
+            
+                <a href="ch08.html#我的第一个函子">
+            
+                    
+                    我的第一个函子
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="ch08.html">
+            
+                <a href="ch08.html#薛定谔的-maybe">
+            
+                    
+                    薛定谔的 Maybe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="ch08.html">
+            
+                <a href="ch08.html#用例">
+            
+                    
+                    用例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="ch08.html">
+            
+                <a href="ch08.html#把值放出来">
+            
+                    
+                    把值放出来
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="ch08.html">
+            
+                <a href="ch08.html#纯粹的错误处理">
+            
+                    
+                    纯粹的错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="ch08.html">
+            
+                <a href="ch08.html#老麦克唐纳有个效应">
+            
+                    
+                    老麦克唐纳有个效应……
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="ch08.html">
+            
+                <a href="ch08.html#异步任务">
+            
+                    
+                    异步任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="ch08.html">
+            
+                <a href="ch08.html#一点理论">
+            
+                    
+                    一点理论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="ch08.html">
+            
+                <a href="ch08.html#小结">
+            
+                    
+                    小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="ch08.html">
+            
+                <a href="ch08.html#练习">
+            
+                    
+                    练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="ch09.html">
+            
+                <a href="ch09.html">
+            
+                    
+                    第 09 章：单子洋葱
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="ch09.html">
+            
+                <a href="ch09.html#尖头函子工厂">
+            
+                    
+                    尖头函子工厂
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="ch09.html">
+            
+                <a href="ch09.html#比喻大乱炖">
+            
+                    
+                    比喻大乱炖
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="ch09.html">
+            
+                <a href="ch09.html#我的链子拍在胸口">
+            
+                    
+                    我的链子拍在胸口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="ch09.html">
+            
+                <a href="ch09.html#耍威风的瘾">
+            
+                    
+                    耍威风的瘾
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="ch09.html">
+            
+                <a href="ch09.html#理论">
+            
+                    
+                    理论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="ch09.html">
+            
+                <a href="ch09.html#总结">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="ch09.html">
+            
+                <a href="ch09.html#练习">
+            
+                    
+                    练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="ch10.html">
+            
+                <a href="ch10.html">
+            
+                    
+                    第 10 章：应用函子
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="ch10.html">
+            
+                <a href="ch10.html#把应用函子应用起来">
+            
+                    
+                    把应用函子应用起来
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="ch10.html">
+            
+                <a href="ch10.html#瓶中船">
+            
+                    
+                    瓶中船
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="ch10.html">
+            
+                <a href="ch10.html#协调的动机">
+            
+                    
+                    协调的动机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="ch10.html">
+            
+                <a href="ch10.html#兄弟，你举得起来吗？">
+            
+                    
+                    兄弟，你举得起来吗？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="ch10.html">
+            
+                <a href="ch10.html#运算符">
+            
+                    
+                    运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="ch10.html">
+            
+                <a href="ch10.html#白送的开罐器">
+            
+                    
+                    白送的开罐器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="ch10.html">
+            
+                <a href="ch10.html#定律">
+            
+                    
+                    定律
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="ch10.html">
+            
+                <a href="ch10.html#小结">
+            
+                    
+                    小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.9" data-path="ch10.html">
+            
+                <a href="ch10.html#练习">
+            
+                    
+                    练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="ch11.html">
+            
+                <a href="ch11.html">
+            
+                    
+                    第 11 章：自然而然地再变换
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="ch11.html">
+            
+                <a href="ch11.html#这要命的嵌套">
+            
+                    
+                    这要命的嵌套
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="ch11.html">
+            
+                <a href="ch11.html#情景喜剧">
+            
+                    
+                    情景喜剧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="ch11.html">
+            
+                <a href="ch11.html#纯天然">
+            
+                    
+                    纯天然
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="ch11.html">
+            
+                <a href="ch11.html#有原则的类型转换">
+            
+                    
+                    有原则的类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="ch11.html">
+            
+                <a href="ch11.html#特性嫉妒">
+            
+                    
+                    特性嫉妒
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="ch11.html">
+            
+                <a href="ch11.html#同构的-javascript">
+            
+                    
+                    同构的 JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="ch11.html">
+            
+                <a href="ch11.html#一个更宽泛的定义">
+            
+                    
+                    一个更宽泛的定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="ch11.html">
+            
+                <a href="ch11.html#一种嵌套的解法">
+            
+                    
+                    一种嵌套的解法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.9" data-path="ch11.html">
+            
+                <a href="ch11.html#总结">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.10" data-path="ch11.html">
+            
+                <a href="ch11.html#练习">
+            
+                    
+                    练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="ch12.html">
+            
+                <a href="ch12.html">
+            
+                    
+                    第 12 章：穿越石头
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="ch12.html">
+            
+                <a href="ch12.html#类型叠类型">
+            
+                    
+                    类型叠类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="ch12.html">
+            
+                <a href="ch12.html#类型的风水">
+            
+                    
+                    类型的风水
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="ch12.html">
+            
+                <a href="ch12.html#效应大杂烩">
+            
+                    
+                    效应大杂烩
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="ch12.html">
+            
+                <a href="ch12.html#类型圆舞曲">
+            
+                    
+                    类型圆舞曲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="ch12.html">
+            
+                <a href="ch12.html#无法无天">
+            
+                    
+                    无法无天
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.6" data-path="ch12.html">
+            
+                <a href="ch12.html#总结">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.7" data-path="ch12.html">
+            
+                <a href="ch12.html#练习">
+            
+                    
+                    练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="ch13.html">
+            
+                <a href="ch13.html">
+            
+                    
+                    第 13 章：幺半群把一切聚拢
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="ch13.html">
+            
+                <a href="ch13.html#狂野的组合">
+            
+                    
+                    狂野的组合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="ch13.html">
+            
+                <a href="ch13.html#把加法抽象出来">
+            
+                    
+                    把加法抽象出来
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="ch13.html">
+            
+                <a href="ch13.html#我最爱的函子都是半群。">
+            
+                    
+                    我最爱的函子都是半群。
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="ch13.html">
+            
+                <a href="ch13.html#白送的幺半群">
+            
+                    
+                    白送的幺半群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="ch13.html">
+            
+                <a href="ch13.html#把房子折塌">
+            
+                    
+                    把房子折塌
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" data-path="ch13.html">
+            
+                <a href="ch13.html#还算不上幺半群">
+            
+                    
+                    还算不上幺半群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7" data-path="ch13.html">
+            
+                <a href="ch13.html#大统一理论">
+            
+                    
+                    大统一理论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.8" data-path="ch13.html">
+            
+                <a href="ch13.html#群论还是范畴论？">
+            
+                    
+                    群论还是范畴论？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.9" data-path="ch13.html">
+            
+                <a href="ch13.html#小结">
+            
+                    
+                    小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.10" data-path="ch13.html">
+            
+                <a href="ch13.html#练习">
+            
+                    
+                    练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html">
+            
+                    
+                    附录 A：必备函数支持
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#always">
+            
+                    
+                    always
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#compose">
+            
+                    
+                    compose
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#curry">
+            
+                    
+                    curry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#either">
+            
+                    
+                    either
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#identity">
+            
+                    
+                    identity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#inspect">
+            
+                    
+                    inspect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#left">
+            
+                    
+                    left
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.8" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#lifta2">
+            
+                    
+                    liftA2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.9" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#lifta3">
+            
+                    
+                    liftA3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.10" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#maybe">
+            
+                    
+                    maybe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.11" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#nothing">
+            
+                    
+                    nothing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.12" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#reject">
+            
+                    
+                    reject
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html">
+            
+                    
+                    附录 B：代数结构支持
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#compose">
+            
+                    
+                    Compose
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#either">
+            
+                    
+                    Either
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#identity">
+            
+                    
+                    Identity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#io">
+            
+                    
+                    IO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#list">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#map">
+            
+                    
+                    Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#maybe">
+            
+                    
+                    Maybe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#task">
+            
+                    
+                    Task
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html">
+            
+                    
+                    附录 C：无值风格工具函数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#add">
+            
+                    
+                    add
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#append">
+            
+                    
+                    append
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#chain">
+            
+                    
+                    chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.4" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#concat">
+            
+                    
+                    concat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.5" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#eq">
+            
+                    
+                    eq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.6" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#filter">
+            
+                    
+                    filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.7" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#flip">
+            
+                    
+                    flip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.8" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#foreach">
+            
+                    
+                    forEach
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.9" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#head">
+            
+                    
+                    head
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.10" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#intercalate">
+            
+                    
+                    intercalate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.11" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#join">
+            
+                    
+                    join
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.12" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#last">
+            
+                    
+                    last
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.13" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#map">
+            
+                    
+                    map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.14" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#match">
+            
+                    
+                    match
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.15" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#prop">
+            
+                    
+                    prop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.16" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#reduce">
+            
+                    
+                    reduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.17" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#replace">
+            
+                    
+                    replace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.18" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#reverse">
+            
+                    
+                    reverse
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.19" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#safehead">
+            
+                    
+                    safeHead
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.20" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#safelast">
+            
+                    
+                    safeLast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.21" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#safeprop">
+            
+                    
+                    safeProp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.22" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#sequence">
+            
+                    
+                    sequence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.23" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#sortby">
+            
+                    
+                    sortBy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.24" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#split">
+            
+                    
+                    split
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.25" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#take">
+            
+                    
+                    take
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.26" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#tolowercase">
+            
+                    
+                    toLowerCase
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.27" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#tostring">
+            
+                    
+                    toString
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.28" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#touppercase">
+            
+                    
+                    toUpperCase
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.29" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#traverse">
+            
+                    
+                    traverse
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.30" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#unsafeperformio">
+            
+                    
+                    unsafePerformIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >第 06 章：示例应用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;-06-&#x7AE0;&#xFF1A;&#x793A;&#x4F8B;&#x5E94;&#x7528;">&#x7B2C; 06 &#x7AE0;&#xFF1A;&#x793A;&#x4F8B;&#x5E94;&#x7528;</h1>
+<h2 id="&#x58F0;&#x660E;&#x5F0F;&#x7F16;&#x7A0B;">&#x58F0;&#x660E;&#x5F0F;&#x7F16;&#x7A0B;</h2>
+<p>&#x54B1;&#x4EEC;&#x8981;&#x6362;&#x6362;&#x8111;&#x5B50;&#x3002;&#x4ECE;&#x73B0;&#x5728;&#x8D77;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x518D;&#x5429;&#x5490;&#x8BA1;&#x7B97;&#x673A;&#x8BE5;&#x600E;&#x4E48;&#x5E72;&#x6D3B;&#xFF0C;&#x800C;&#x662F;&#x5199;&#x4E0B;&#x4E00;&#x4EFD;&#x8BF4;&#x660E;&#x4E66;&#xFF0C;&#x8BF4;&#x660E;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#x7ED3;&#x679C;&#x662F;&#x4EC0;&#x4E48;&#x3002;&#x6211;&#x6562;&#x6253;&#x5305;&#x7968;&#xFF0C;&#x8FD9;&#x6BD4;&#x4E00;&#x5929;&#x5230;&#x665A;&#x4E8B;&#x65E0;&#x5DE8;&#x7EC6;&#x5730;&#x4EC0;&#x4E48;&#x90FD;&#x7BA1;&#x8981;&#x8F7B;&#x677E;&#x5F97;&#x591A;&#x3002;</p>
+<p>&#x58F0;&#x660E;&#x5F0F;&#xFF0C;&#x8DDF;&#x547D;&#x4EE4;&#x5F0F;&#x76F8;&#x5BF9;&#xFF0C;&#x610F;&#x601D;&#x662F;&#x6211;&#x4EEC;&#x8981;&#x5199;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x7684;&#x6307;&#x4EE4;&#x3002;</p>
+<p>&#x60F3;&#x60F3; SQL&#x3002;&#x91CC;&#x5934;&#x6CA1;&#x6709;&#x201C;&#x5148;&#x5E72;&#x8FD9;&#x4E2A;&#xFF0C;&#x518D;&#x5E72;&#x90A3;&#x4E2A;&#x201D;&#x3002;&#x53EA;&#x6709;&#x4E00;&#x6761;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x8BF4;&#x660E;&#x6211;&#x4EEC;&#x60F3;&#x4ECE;&#x6570;&#x636E;&#x5E93;&#x91CC;&#x8981;&#x4EC0;&#x4E48;&#x3002;&#x6D3B;&#x513F;&#x600E;&#x4E48;&#x5E72;&#x4E0D;&#x7531;&#x6211;&#x4EEC;&#x51B3;&#x5B9A;&#xFF0C;&#x7531;&#x5B83;&#x51B3;&#x5B9A;&#x3002;&#x6570;&#x636E;&#x5E93;&#x5347;&#x7EA7;&#x3001;SQL &#x5F15;&#x64CE;&#x4F18;&#x5316;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x67E5;&#x8BE2;&#x4E00;&#x4E2A;&#x5B57;&#x90FD;&#x4E0D;&#x7528;&#x6539;&#x3002;&#x56E0;&#x4E3A;&#x89E3;&#x91CA;&#x8FD9;&#x4EFD;&#x8BF4;&#x660E;&#x4E66;&#x3001;&#x5F97;&#x5230;&#x540C;&#x6837;&#x7ED3;&#x679C;&#x7684;&#x65B9;&#x5F0F;&#x6709;&#x5F88;&#x591A;&#x79CD;&#x3002;</p>
+<p>&#x5BF9;&#x6709;&#x4E9B;&#x4EBA;&#x2014;&#x2014;&#x5305;&#x62EC;&#x6211;&#x81EA;&#x5DF1;&#x2014;&#x2014;&#x6765;&#x8BF4;&#xFF0C;&#x58F0;&#x660E;&#x5F0F;&#x7F16;&#x7A0B;&#x8FD9;&#x4E2A;&#x6982;&#x5FF5;&#x4E00;&#x5F00;&#x59CB;&#x5F88;&#x96BE;&#x6293;&#xFF0C;&#x6240;&#x4EE5;&#x54B1;&#x4EEC;&#x4E3E;&#x51E0;&#x4E2A;&#x4F8B;&#x5B50;&#x627E;&#x627E;&#x611F;&#x89C9;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x547D;&#x4EE4;&#x5F0F;</span>
+<span class="hljs-keyword">const</span> makes = [];
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; cars.length; i += <span class="hljs-number">1</span>) {
+  makes.push(cars[i].make);
+}
+
+<span class="hljs-comment">// &#x58F0;&#x660E;&#x5F0F;</span>
+<span class="hljs-keyword">const</span> makes = cars.map(car =&gt; car.make);
+</code></pre>
+<p>&#x547D;&#x4EE4;&#x5F0F;&#x7684;&#x5FAA;&#x73AF;&#x5FC5;&#x987B;&#x5148;&#x5B9E;&#x4F8B;&#x5316;&#x90A3;&#x4E2A;&#x6570;&#x7EC4;&#x3002;&#x89E3;&#x91CA;&#x5668;&#x5F97;&#x5148;&#x628A;&#x8FD9;&#x6761;&#x8BED;&#x53E5;&#x6C42;&#x503C;&#x5B8C;&#xFF0C;&#x624D;&#x80FD;&#x5F80;&#x4E0B;&#x8D70;&#x3002;&#x7136;&#x540E;&#x5B83;&#x76F4;&#x63A5;&#x904D;&#x5386;&#x6574;&#x4E2A;&#x6C7D;&#x8F66;&#x5217;&#x8868;&#xFF0C;&#x624B;&#x52A8;&#x9012;&#x589E;&#x4E00;&#x4E2A;&#x8BA1;&#x6570;&#x5668;&#xFF0C;&#x7528;&#x4E00;&#x573A;&#x7C97;&#x4FD7;&#x7684;&#x663E;&#x5F0F;&#x8FED;&#x4EE3;&#x8868;&#x6F14;&#xFF0C;&#x628A;&#x5B83;&#x7684;&#x96F6;&#x96F6;&#x788E;&#x788E;&#x644A;&#x7ED9;&#x6211;&#x4EEC;&#x770B;&#x3002;</p>
+<p><code>map</code> &#x7248;&#x672C;&#x53EA;&#x6709;&#x4E00;&#x6761;&#x8868;&#x8FBE;&#x5F0F;&#x3002;&#x5B83;&#x4E0D;&#x8981;&#x6C42;&#x4EFB;&#x4F55;&#x6C42;&#x503C;&#x987A;&#x5E8F;&#x3002;map &#x51FD;&#x6570;&#x600E;&#x4E48;&#x8FED;&#x4EE3;&#x3001;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x7EC4;&#x600E;&#x4E48;&#x62FC;&#x88C5;&#xFF0C;&#x8FD9;&#x91CC;&#x6709;&#x5145;&#x5206;&#x7684;&#x81EA;&#x7531;&#x3002;&#x5B83;&#x89C4;&#x5B9A;&#x7684;&#x662F;<em>&#x8981;&#x4EC0;&#x4E48;</em>&#xFF0C;&#x800C;&#x4E0D;&#x662F;<em>&#x600E;&#x4E48;&#x5E72;</em>&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5B83;&#x624D;&#x6234;&#x4E0A;&#x4E86;&#x90A3;&#x6761;&#x95EA;&#x4EAE;&#x7684;&#x58F0;&#x660E;&#x5F0F;&#x7EF6;&#x5E26;&#x3002;</p>
+<p>&#x9664;&#x4E86;&#x66F4;&#x6E05;&#x695A;&#x3001;&#x66F4;&#x7B80;&#x6D01;&#xFF0C;map &#x51FD;&#x6570;&#x8FD8;&#x53EF;&#x4EE5;&#x968F;&#x610F;&#x4F18;&#x5316;&#xFF0C;&#x800C;&#x6211;&#x4EEC;&#x5B9D;&#x8D1D;&#x7684;&#x5E94;&#x7528;&#x4EE3;&#x7801;&#x4E00;&#x4E2A;&#x5B57;&#x90FD;&#x4E0D;&#x7528;&#x6539;&#x3002;</p>
+<p>&#x81F3;&#x4E8E;&#x90A3;&#x4E9B;&#x5FC3;&#x91CC;&#x60F3;&#x7740;&#x201C;&#x8BDD;&#x662F;&#x8FD9;&#x4E48;&#x8BF4;&#xFF0C;&#x53EF;&#x547D;&#x4EE4;&#x5F0F;&#x5FAA;&#x73AF;&#x5FEB;&#x591A;&#x4E86;&#x201D;&#x7684;&#x670B;&#x53CB;&#xFF0C;&#x6211;&#x5EFA;&#x8BAE;&#x4F60;&#x5148;&#x53BB;&#x8865;&#x8865;&#x8BFE;&#xFF0C;&#x641E;&#x6E05;&#x695A; JIT &#x662F;&#x600E;&#x4E48;&#x4F18;&#x5316;&#x4F60;&#x4EE3;&#x7801;&#x7684;&#x3002;&#x8FD9;&#x513F;&#x6709;&#x4E2A;<a href="https://www.youtube.com/watch?v=g0ek4vV7nEA" target="_blank">&#x5F88;&#x68D2;&#x7684;&#x89C6;&#x9891;&#xFF0C;&#x4E5F;&#x8BB8;&#x80FD;&#x7ED9;&#x4F60;&#x70B9;&#x542F;&#x53D1;</a></p>
+<p>&#x518D;&#x6765;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x547D;&#x4EE4;&#x5F0F;</span>
+<span class="hljs-keyword">const</span> authenticate = (form) =&gt; {
+  <span class="hljs-keyword">const</span> user = toUser(form);
+  <span class="hljs-keyword">return</span> logIn(user);
+};
+
+<span class="hljs-comment">// &#x58F0;&#x660E;&#x5F0F;</span>
+<span class="hljs-keyword">const</span> authenticate = compose(logIn, toUser);
+</code></pre>
+<p>&#x547D;&#x4EE4;&#x5F0F;&#x90A3;&#x4E2A;&#x7248;&#x672C;&#x5012;&#x4E0D;&#x4E00;&#x5B9A;&#x6709;&#x4EC0;&#x4E48;&#x9519;&#xFF0C;&#x4F46;&#x5B83;&#x91CC;&#x5934;&#x6BD5;&#x7ADF;&#x70E4;&#x8FDB;&#x4E86;&#x4E00;&#x5957;&#x7F16;&#x7801;&#x597D;&#x7684;&#x4E00;&#x6B65;&#x6B65;&#x6C42;&#x503C;&#x6D41;&#x7A0B;&#x3002;<code>compose</code> &#x8868;&#x8FBE;&#x5F0F;&#x53EA;&#x662F;&#x9648;&#x8FF0;&#x4E86;&#x4E00;&#x4E2A;&#x4E8B;&#x5B9E;&#xFF1A;&#x8BA4;&#x8BC1;&#x5C31;&#x662F; <code>toUser</code> &#x548C; <code>logIn</code> &#x7684;&#x7EC4;&#x5408;&#x3002;&#x8FD9;&#x540C;&#x6837;&#x7ED9;&#x652F;&#x6301;&#x4EE3;&#x7801;&#x7684;&#x6539;&#x52A8;&#x7559;&#x4E86;&#x4F59;&#x5730;&#xFF0C;&#x4E5F;&#x8BA9;&#x6211;&#x4EEC;&#x7684;&#x5E94;&#x7528;&#x4EE3;&#x7801;&#x6210;&#x4E86;&#x4E00;&#x4EFD;&#x9AD8;&#x5C42;&#x6B21;&#x7684;&#x8BF4;&#x660E;&#x4E66;&#x3002;</p>
+<p>&#x4E0A;&#x9762;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x91CC;&#xFF0C;&#x6C42;&#x503C;&#x987A;&#x5E8F;&#x662F;&#x89C4;&#x5B9A;&#x6B7B;&#x7684;&#xFF08;<code>toUser</code> &#x5FC5;&#x987B;&#x5728; <code>logIn</code> &#x4E4B;&#x524D;&#x8C03;&#x7528;&#xFF09;&#xFF0C;&#x4F46;&#x6709;&#x5F88;&#x591A;&#x573A;&#x666F;&#x987A;&#x5E8F;&#x6839;&#x672C;&#x4E0D;&#x91CD;&#x8981;&#xFF0C;&#x800C;&#x7528;&#x58F0;&#x660E;&#x5F0F;&#x7F16;&#x7A0B;&#x5F88;&#x5BB9;&#x6613;&#x628A;&#x8FD9;&#x4E00;&#x70B9;&#x8868;&#x8FBE;&#x51FA;&#x6765;&#xFF08;&#x8FD9;&#x4E2A;&#x540E;&#x9762;&#x518D;&#x7EC6;&#x8BF4;&#xFF09;&#x3002;</p>
+<p>&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x4E0D;&#x5FC5;&#x628A;&#x6C42;&#x503C;&#x987A;&#x5E8F;&#x7F16;&#x7801;&#x8FDB;&#x53BB;&#xFF0C;&#x58F0;&#x660E;&#x5F0F;&#x7F16;&#x7A0B;&#x5929;&#x751F;&#x9002;&#x5408;&#x5E76;&#x884C;&#x8BA1;&#x7B97;&#x3002;&#x8FD9;&#x4E00;&#x70B9;&#x518D;&#x52A0;&#x4E0A;&#x7EAF;&#x51FD;&#x6570;&#xFF08;pure function&#xFF09;&#xFF0C;&#x5C31;&#x662F;&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;&#xFF08;functional programming&#xFF09;&#x5728;&#x5E76;&#x884C;&#x672A;&#x6765;&#x91CC;&#x662F;&#x4E2A;&#x597D;&#x9009;&#x62E9;&#x7684;&#x539F;&#x56E0;&#x2014;&#x2014;&#x8981;&#x641E;&#x51FA;&#x5E76;&#x884C;/&#x5E76;&#x53D1;&#x7684;&#x7CFB;&#x7EDF;&#xFF0C;&#x6211;&#x4EEC;&#x5176;&#x5B9E;&#x4E0D;&#x9700;&#x8981;&#x505A;&#x4EC0;&#x4E48;&#x7279;&#x522B;&#x7684;&#x4E8B;&#x3002;</p>
+<h2 id="&#x4E00;&#x62B9;&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;&#x7684;-flickr-&#x5FAE;&#x5149;">&#x4E00;&#x62B9;&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;&#x7684; Flickr &#x5FAE;&#x5149;</h2>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x8981;&#x7528;&#x58F0;&#x660E;&#x5F0F;&#x3001;&#x53EF;&#x7EC4;&#x5408;&#x7684;&#x65B9;&#x5F0F;&#x642D;&#x5EFA;&#x4E00;&#x4E2A;&#x793A;&#x4F8B;&#x5E94;&#x7528;&#x3002;&#x773C;&#x4E0B;&#x6211;&#x4EEC;&#x8FD8;&#x662F;&#x4F1A;&#x4F5C;&#x5F0A;&#xFF0C;&#x7528;&#x70B9;&#x526F;&#x4F5C;&#x7528;&#xFF08;side effect&#xFF09;&#xFF0C;&#x4F46;&#x4F1A;&#x628A;&#x5B83;&#x538B;&#x5230;&#x6700;&#x5C11;&#xFF0C;&#x5E76;&#x4E14;&#x8DDF;&#x6211;&#x4EEC;&#x7684;&#x7EAF;&#x4EE3;&#x7801;&#x5E93;&#x9694;&#x5F00;&#x3002;&#x6211;&#x4EEC;&#x8981;&#x505A;&#x4E00;&#x4E2A;&#x5C0F;&#x6D4F;&#x89C8;&#x5668;&#x90E8;&#x4EF6;&#xFF0C;&#x628A; flickr &#x4E0A;&#x7684;&#x56FE;&#x7247;&#x5438;&#x8FDB;&#x6765;&#x518D;&#x663E;&#x793A;&#x51FA;&#x6765;&#x3002;&#x5148;&#x4ECE;&#x642D;&#x811A;&#x624B;&#x67B6;&#x5F00;&#x59CB;&#x3002;&#x8FD9;&#x662F; html&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!doctype html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Flickr App<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-main&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;main&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.min.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;main.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>&#x8FD9;&#x662F; main.js &#x7684;&#x9AA8;&#x67B6;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> CDN = s =&gt; <span class="hljs-string">`https://cdnjs.cloudflare.com/ajax/libs/<span class="hljs-subst">${s}</span>`</span>;
+<span class="hljs-keyword">const</span> ramda = CDN(<span class="hljs-string">&apos;ramda/0.21.0/ramda.min&apos;</span>);
+<span class="hljs-keyword">const</span> jquery = CDN(<span class="hljs-string">&apos;jquery/3.0.0-rc1/jquery.min&apos;</span>);
+
+requirejs.config({ paths: { ramda, jquery } });
+requirejs([<span class="hljs-string">&apos;jquery&apos;</span>, <span class="hljs-string">&apos;ramda&apos;</span>], ($, { compose, curry, map, prop }) =&gt; {
+  <span class="hljs-comment">// &#x5E94;&#x7528;&#x5199;&#x5728;&#x8FD9;&#x513F;</span>
+});
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x8BF7;&#x6765;&#x7684;&#x662F; <a href="https://ramdajs.com" target="_blank">ramda</a>&#xFF0C;&#x800C;&#x4E0D;&#x662F; lodash &#x6216;&#x522B;&#x7684;&#x4EC0;&#x4E48;&#x5DE5;&#x5177;&#x5E93;&#x3002;&#x5B83;&#x81EA;&#x5E26; <code>compose</code>&#x3001;<code>curry</code> &#x7B49;&#x7B49;&#x3002;&#x6211;&#x7528;&#x4E0A;&#x4E86; requirejs&#xFF0C;&#x770B;&#x7740;&#x53EF;&#x80FD;&#x6709;&#x70B9;&#x6740;&#x9E21;&#x7528;&#x725B;&#x5200;&#xFF0C;&#x4F46;&#x6574;&#x672C;&#x4E66;&#x90FD;&#x8981;&#x7528;&#x5B83;&#xFF0C;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#x662F;&#x5173;&#x952E;&#x3002;</p>
+<p>&#x8FD9;&#x4E9B;&#x6742;&#x4E8B;&#x6599;&#x7406;&#x5B8C;&#x4E86;&#xFF0C;&#x6765;&#x8BF4;&#x9700;&#x6C42;&#x3002;&#x6211;&#x4EEC;&#x7684;&#x5E94;&#x7528;&#x8981;&#x505A; 4 &#x4EF6;&#x4E8B;&#x3002;</p>
+<ol>
+<li>&#x4E3A;&#x6211;&#x4EEC;&#x7684;&#x641C;&#x7D22;&#x8BCD;&#x62FC;&#x51FA;&#x4E00;&#x4E2A; url</li>
+<li>&#x53D1;&#x8D77; flickr api &#x8C03;&#x7528;</li>
+<li>&#x628A;&#x8FD4;&#x56DE;&#x7684; json &#x53D8;&#x6210; html &#x56FE;&#x7247;</li>
+<li>&#x628A;&#x5B83;&#x4EEC;&#x6446;&#x5230;&#x5C4F;&#x5E55;&#x4E0A;</li>
+</ol>
+<p>&#x4E0A;&#x9762;&#x63D0;&#x5230;&#x4E86; 2 &#x4E2A;&#x4E0D;&#x7EAF;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x4F60;&#x770B;&#x89C1;&#x4E86;&#x5417;&#xFF1F;&#x5C31;&#x662F;&#x4ECE; flickr api &#x62FF;&#x6570;&#x636E;&#x3001;&#x4EE5;&#x53CA;&#x628A;&#x4E1C;&#x897F;&#x6446;&#x5230;&#x5C4F;&#x5E55;&#x4E0A;&#x90A3;&#x4E24;&#x5904;&#x3002;&#x54B1;&#x4EEC;&#x5148;&#x628A;&#x5B83;&#x4EEC;&#x5B9A;&#x4E49;&#x597D;&#xFF0C;&#x597D;&#x628A;&#x5B83;&#x4EEC;&#x9694;&#x79BB;&#x8D77;&#x6765;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x6211;&#x4F1A;&#x628A;&#x54B1;&#x4EEC;&#x90A3;&#x4E2A;&#x597D;&#x7528;&#x7684; <code>trace</code> &#x51FD;&#x6570;&#x52A0;&#x8FDB;&#x53BB;&#xFF0C;&#x65B9;&#x4FBF;&#x8C03;&#x8BD5;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> Impure = {
+  getJSON: curry((callback, url) =&gt; $.getJSON(url, callback)),
+  setHtml: curry((sel, html) =&gt; $(sel).html(html)),
+  trace: curry((tag, x) =&gt; { <span class="hljs-built_in">console</span>.log(tag, x); <span class="hljs-keyword">return</span> x; }),
+};
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x53EA;&#x662F;&#x628A; jQuery &#x7684;&#x65B9;&#x6CD5;&#x5305;&#x4E86;&#x4E00;&#x5C42;&#xFF0C;&#x8BA9;&#x5B83;&#x4EEC;&#x67EF;&#x91CC;&#x5316;&#xFF08;currying&#xFF09;&#xFF0C;&#x8FD8;&#x628A;&#x53C2;&#x6570;&#x987A;&#x5E8F;&#x6362;&#x5230;&#x4E86;&#x66F4;&#x987A;&#x624B;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x6211;&#x7528; <code>Impure</code> &#x7ED9;&#x5B83;&#x4EEC;&#x52A0;&#x4E86;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF0C;&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x5C31;&#x77E5;&#x9053;&#x8FD9;&#x4E9B;&#x662F;&#x5371;&#x9669;&#x51FD;&#x6570;&#x3002;&#x4EE5;&#x540E;&#x7684;&#x4F8B;&#x5B50;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x628A;&#x8FD9;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x53D8;&#x6210;&#x7EAF;&#x7684;&#x3002;</p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6211;&#x4EEC;&#x5F97;&#x62FC;&#x51FA;&#x4E00;&#x4E2A; url&#xFF0C;&#x4F20;&#x7ED9; <code>Impure.getJSON</code> &#x51FD;&#x6570;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> host = <span class="hljs-string">&apos;api.flickr.com&apos;</span>;
+<span class="hljs-keyword">const</span> path = <span class="hljs-string">&apos;/services/feeds/photos_public.gne&apos;</span>;
+<span class="hljs-keyword">const</span> query = t =&gt; <span class="hljs-string">`?tags=<span class="hljs-subst">${t}</span>&amp;format=json&amp;jsoncallback=?`</span>;
+<span class="hljs-keyword">const</span> url = t =&gt; <span class="hljs-string">`https://<span class="hljs-subst">${host}</span><span class="hljs-subst">${path}</span><span class="hljs-subst">${query(t)}</span>`</span>;
+</code></pre>
+<p>&#x7528;&#x5E7A;&#x534A;&#x7FA4;&#xFF08;monoid&#xFF0C;&#x8FD9;&#x4E2A;&#x540E;&#x9762;&#x4F1A;&#x5B66;&#xFF09;&#x6216;&#x8005;&#x7EC4;&#x5408;&#x5B50;&#xFF08;combinator&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x5199;&#x51FA;&#x5404;&#x79CD;&#x82B1;&#x54E8;&#x53C8;&#x8FC7;&#x5EA6;&#x590D;&#x6742;&#x7684;&#x65E0;&#x503C;&#x98CE;&#x683C;&#xFF08;pointfree&#xFF09; <code>url</code>&#x3002;&#x6211;&#x4EEC;&#x9009;&#x62E9;&#x8001;&#x8001;&#x5B9E;&#x5B9E;&#x4FDD;&#x7559;&#x4E00;&#x4E2A;&#x53EF;&#x8BFB;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x7528;&#x6B63;&#x5E38;&#x7684;&#x6709;&#x503C;&#x65B9;&#x5F0F;&#x628A;&#x8FD9;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x62FC;&#x51FA;&#x6765;&#x3002;</p>
+<p>&#x54B1;&#x4EEC;&#x5199;&#x4E00;&#x4E2A; app &#x51FD;&#x6570;&#xFF0C;&#x8D1F;&#x8D23;&#x53D1;&#x8D77;&#x8C03;&#x7528;&#x5E76;&#x628A;&#x5185;&#x5BB9;&#x6446;&#x5230;&#x5C4F;&#x5E55;&#x4E0A;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> app = compose(Impure.getJSON(Impure.trace(<span class="hljs-string">&apos;response&apos;</span>)), url);
+app(<span class="hljs-string">&apos;cats&apos;</span>);
+</code></pre>
+<p>&#x5B83;&#x4F1A;&#x8C03;&#x7528;&#x6211;&#x4EEC;&#x7684; <code>url</code> &#x51FD;&#x6570;&#xFF0C;&#x518D;&#x628A;&#x5F97;&#x5230;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x4F20;&#x7ED9; <code>getJSON</code> &#x51FD;&#x6570;&#x2014;&#x2014;&#x90A3;&#x4E2A;&#x51FD;&#x6570;&#x5DF2;&#x7ECF;&#x88AB; <code>trace</code> &#x90E8;&#x5206;&#x5E94;&#x7528;&#xFF08;partial application&#xFF09;&#x8FC7;&#x4E86;&#x3002;&#x52A0;&#x8F7D;&#x5E94;&#x7528;&#xFF0C;&#x63A7;&#x5236;&#x53F0;&#x91CC;&#x5C31;&#x4F1A;&#x663E;&#x793A; api &#x8C03;&#x7528;&#x8FD4;&#x56DE;&#x7684;&#x54CD;&#x5E94;&#x3002;</p>
+<p><img src="images/console_ss.png" alt="&#x63A7;&#x5236;&#x53F0;&#x54CD;&#x5E94;"></p>
+<p>&#x6211;&#x4EEC;&#x60F3;&#x62FF;&#x8FD9;&#x4EFD; json &#x9020;&#x51FA;&#x56FE;&#x7247;&#x6765;&#x3002;&#x770B;&#x8D77;&#x6765; <code>mediaUrls</code> &#x57CB;&#x5728; <code>items</code> &#x91CC;&#xFF0C;&#x518D;&#x5F80;&#x4E0B;&#x662F;&#x6BCF;&#x4E2A; <code>media</code> &#x7684; <code>m</code> &#x5C5E;&#x6027;&#x3002;</p>
+<p>&#x4E0D;&#x7BA1;&#x600E;&#x6837;&#xFF0C;&#x8981;&#x591F;&#x5230;&#x8FD9;&#x4E9B;&#x5D4C;&#x5957;&#x5C5E;&#x6027;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528; ramda &#x91CC;&#x4E00;&#x4E2A;&#x5F88;&#x597D;&#x7528;&#x7684;&#x901A;&#x7528;&#x53D6;&#x503C;&#x51FD;&#x6570;&#xFF0C;&#x53EB; <code>prop</code>&#x3002;&#x8FD9;&#x513F;&#x6709;&#x4E2A;&#x571F;&#x5236;&#x7248;&#x672C;&#xFF0C;&#x8BA9;&#x4F60;&#x770B;&#x660E;&#x767D;&#x5B83;&#x662F;&#x600E;&#x4E48;&#x56DE;&#x4E8B;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> prop = curry((property, object) =&gt; object[property]);
+</code></pre>
+<p>&#x5176;&#x5B9E;&#x8FD9;&#x73A9;&#x610F;&#x513F;&#x76F8;&#x5F53;&#x4E4F;&#x5473;&#x3002;&#x6211;&#x4EEC;&#x5C31;&#x662F;&#x7528; <code>[]</code> &#x8BED;&#x6CD5;&#x53BB;&#x8BBF;&#x95EE;&#x968F;&#x4FBF;&#x4EC0;&#x4E48;&#x5BF9;&#x8C61;&#x4E0A;&#x7684;&#x5C5E;&#x6027;&#x3002;&#x62FF;&#x5B83;&#x53BB;&#x53D6;&#x6211;&#x4EEC;&#x7684; <code>mediaUrls</code> &#x5427;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> mediaUrl = compose(prop(<span class="hljs-string">&apos;m&apos;</span>), prop(<span class="hljs-string">&apos;media&apos;</span>));
+<span class="hljs-keyword">const</span> mediaUrls = compose(map(mediaUrl), prop(<span class="hljs-string">&apos;items&apos;</span>));
+</code></pre>
+<p>&#x62FF;&#x5230; <code>items</code> &#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5F97;&#x5BF9;&#x5B83; <code>map</code> &#x4E00;&#x904D;&#xFF0C;&#x628A;&#x6BCF;&#x4E2A; media url &#x63D0;&#x53D6;&#x51FA;&#x6765;&#x3002;&#x8FD9;&#x6837;&#x5C31;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x6F02;&#x6F02;&#x4EAE;&#x4EAE;&#x7684; <code>mediaUrls</code> &#x6570;&#x7EC4;&#x3002;&#x628A;&#x5B83;&#x63A5;&#x5230;&#x5E94;&#x7528;&#x4E0A;&#xFF0C;&#x6253;&#x5370;&#x5230;&#x5C4F;&#x5E55;&#x4E0A;&#x5427;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> render = compose(Impure.setHtml(<span class="hljs-string">&apos;#js-main&apos;</span>), mediaUrls);
+<span class="hljs-keyword">const</span> app = compose(Impure.getJSON(render), url);
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x53EA;&#x662F;&#x505A;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x7EC4;&#x5408;&#xFF0C;&#x5B83;&#x4F1A;&#x8C03;&#x7528; <code>mediaUrls</code>&#xFF0C;&#x518D;&#x7528;&#x7ED3;&#x679C;&#x53BB;&#x8BBE;&#x7F6E; <code>&lt;main&gt;</code> &#x7684; html&#x3002;&#x65E2;&#x7136;&#x9664;&#x4E86;&#x539F;&#x59CB; json &#x4E4B;&#x5916;&#x7EC8;&#x4E8E;&#x6709;&#x4E1C;&#x897F;&#x53EF;&#x6E32;&#x67D3;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x7528; <code>render</code> &#x6362;&#x6389;&#x4E86; <code>trace</code> &#x8C03;&#x7528;&#x3002;&#x8FD9;&#x4F1A;&#x7C97;&#x7CD9;&#x5730;&#x628A; <code>mediaUrls</code> &#x663E;&#x793A;&#x5728; body &#x91CC;&#x3002;</p>
+<p>&#x6700;&#x540E;&#x4E00;&#x6B65;&#xFF0C;&#x662F;&#x628A;&#x8FD9;&#x4E9B; <code>mediaUrls</code> &#x53D8;&#x6210;&#x8D27;&#x771F;&#x4EF7;&#x5B9E;&#x7684; <code>images</code>&#x3002;&#x5728;&#x66F4;&#x5927;&#x7684;&#x5E94;&#x7528;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x7528; Handlebars &#x6216; React &#x8FD9;&#x7C7B;&#x6A21;&#x677F;/DOM &#x5E93;&#x3002;&#x4E0D;&#x8FC7;&#x5BF9;&#x8FD9;&#x4E2A;&#x5E94;&#x7528;&#x6765;&#x8BF4;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x4E00;&#x4E2A; img &#x6807;&#x7B7E;&#xFF0C;&#x6240;&#x4EE5;&#x8FD8;&#x662F;&#x7528; jQuery &#x5427;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> img = src =&gt; $(<span class="hljs-string">&apos;&lt;img /&gt;&apos;</span>, { src });
+</code></pre>
+<p>jQuery &#x7684; <code>html</code> &#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x6807;&#x7B7E;&#x6570;&#x7EC4;&#x3002;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x628A; mediaUrls &#x53D8;&#x6210;&#x56FE;&#x7247;&#xFF0C;&#x518D;&#x4E00;&#x8DEF;&#x9001;&#x7ED9; <code>setHtml</code>&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> images = compose(map(img), mediaUrls);
+<span class="hljs-keyword">const</span> render = compose(Impure.setHtml(<span class="hljs-string">&apos;#js-main&apos;</span>), images);
+<span class="hljs-keyword">const</span> app = compose(Impure.getJSON(render), url);
+</code></pre>
+<p>&#x5927;&#x529F;&#x544A;&#x6210;&#xFF01;</p>
+<p><img src="images/cats_ss.png" alt="&#x732B;&#x56FE;&#x7F51;&#x683C;"></p>
+<p>&#x8FD9;&#x662F;&#x5B8C;&#x5DE5;&#x540E;&#x7684;&#x811A;&#x672C;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> CDN = s =&gt; <span class="hljs-string">`https://cdnjs.cloudflare.com/ajax/libs/<span class="hljs-subst">${s}</span>`</span>;
+<span class="hljs-keyword">const</span> ramda = CDN(<span class="hljs-string">&apos;ramda/0.21.0/ramda.min&apos;</span>);
+<span class="hljs-keyword">const</span> jquery = CDN(<span class="hljs-string">&apos;jquery/3.0.0-rc1/jquery.min&apos;</span>);
+
+requirejs.config({ paths: { ramda, jquery } });
+<span class="hljs-built_in">require</span>([<span class="hljs-string">&apos;jquery&apos;</span>, <span class="hljs-string">&apos;ramda&apos;</span>], ($, { compose, curry, map, prop }) =&gt; {
+  <span class="hljs-comment">// -- &#x5DE5;&#x5177; ----------------------------------------------------------</span>
+  <span class="hljs-keyword">const</span> Impure = {
+    trace: curry((tag, x) =&gt; { <span class="hljs-built_in">console</span>.log(tag, x); <span class="hljs-keyword">return</span> x; }), <span class="hljs-comment">// eslint-disable-line no-console</span>
+    getJSON: curry((callback, url) =&gt; $.getJSON(url, callback)),
+    setHtml: curry((sel, html) =&gt; $(sel).html(html)),
+  };
+
+  <span class="hljs-comment">// -- &#x7EAF;&#x51FD;&#x6570; ---------------------------------------------------------</span>
+  <span class="hljs-keyword">const</span> host = <span class="hljs-string">&apos;api.flickr.com&apos;</span>;
+  <span class="hljs-keyword">const</span> path = <span class="hljs-string">&apos;/services/feeds/photos_public.gne&apos;</span>;
+  <span class="hljs-keyword">const</span> query = t =&gt; <span class="hljs-string">`?tags=<span class="hljs-subst">${t}</span>&amp;format=json&amp;jsoncallback=?`</span>;
+  <span class="hljs-keyword">const</span> url = t =&gt; <span class="hljs-string">`https://<span class="hljs-subst">${host}</span><span class="hljs-subst">${path}</span><span class="hljs-subst">${query(t)}</span>`</span>;
+
+  <span class="hljs-keyword">const</span> img = src =&gt; $(<span class="hljs-string">&apos;&lt;img /&gt;&apos;</span>, { src });
+  <span class="hljs-keyword">const</span> mediaUrl = compose(prop(<span class="hljs-string">&apos;m&apos;</span>), prop(<span class="hljs-string">&apos;media&apos;</span>));
+  <span class="hljs-keyword">const</span> mediaUrls = compose(map(mediaUrl), prop(<span class="hljs-string">&apos;items&apos;</span>));
+  <span class="hljs-keyword">const</span> images = compose(map(img), mediaUrls);
+
+  <span class="hljs-comment">// -- &#x4E0D;&#x7EAF;&#x51FD;&#x6570; -------------------------------------------------------</span>
+  <span class="hljs-keyword">const</span> render = compose(Impure.setHtml(<span class="hljs-string">&apos;#js-main&apos;</span>), images);
+  <span class="hljs-keyword">const</span> app = compose(Impure.getJSON(render), url);
+
+  app(<span class="hljs-string">&apos;cats&apos;</span>);
+});
+</code></pre>
+<p>&#x77A7;&#x77A7;&#x8FD9;&#x4E2A;&#x3002;&#x4E00;&#x4EFD;&#x6F02;&#x4EAE;&#x7684;&#x58F0;&#x660E;&#x5F0F;&#x8BF4;&#x660E;&#x4E66;&#xFF0C;&#x8BF4;&#x660E;&#x7684;&#x662F;&#x4E1C;&#x897F;<em>&#x662F;&#x4EC0;&#x4E48;</em>&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5B83;&#x4EEC;&#x600E;&#x4E48;&#x53D8;&#x6210;&#x8FD9;&#x6837;&#x3002;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x628A;&#x6BCF;&#x4E00;&#x884C;&#x90FD;&#x770B;&#x6210;&#x4E00;&#x4E2A;&#x7B49;&#x5F0F;&#xFF0C;&#x5E26;&#x7740;&#x6210;&#x7ACB;&#x7684;&#x6027;&#x8D28;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528;&#x8FD9;&#x4E9B;&#x6027;&#x8D28;&#x6765;&#x63A8;&#x7406;&#x6211;&#x4EEC;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x7136;&#x540E;&#x91CD;&#x6784;&#x3002;</p>
+<h2 id="&#x6709;&#x539F;&#x5219;&#x7684;&#x91CD;&#x6784;">&#x6709;&#x539F;&#x5219;&#x7684;&#x91CD;&#x6784;</h2>
+<p>&#x8FD9;&#x513F;&#x6709;&#x4E2A;&#x53EF;&#x505A;&#x7684;&#x4F18;&#x5316;&#x2014;&#x2014;&#x6211;&#x4EEC;&#x5148;&#x5BF9;&#x6BCF;&#x4E00;&#x9879; map &#x4E00;&#x904D;&#xFF0C;&#x628A;&#x5B83;&#x53D8;&#x6210; media url&#xFF0C;&#x7136;&#x540E;&#x53C8;&#x5BF9;&#x90A3;&#x4E9B; mediaUrls map &#x4E00;&#x904D;&#xFF0C;&#x628A;&#x5B83;&#x4EEC;&#x53D8;&#x6210; img &#x6807;&#x7B7E;&#x3002;&#x5173;&#x4E8E; map &#x548C;&#x7EC4;&#x5408;&#xFF0C;&#x6709;&#x4E00;&#x6761;&#x5B9A;&#x5F8B;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// map &#x7684;&#x7EC4;&#x5408;&#x5B9A;&#x5F8B;</span>
+compose(map(f), map(g)) === map(compose(f, g));
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x8FD9;&#x6761;&#x6027;&#x8D28;&#x6765;&#x4F18;&#x5316;&#x4EE3;&#x7801;&#x3002;&#x6765;&#x4E00;&#x6B21;&#x6709;&#x539F;&#x5219;&#x7684;&#x91CD;&#x6784;&#x5427;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x539F;&#x59CB;&#x4EE3;&#x7801;</span>
+<span class="hljs-keyword">const</span> mediaUrl = compose(prop(<span class="hljs-string">&apos;m&apos;</span>), prop(<span class="hljs-string">&apos;media&apos;</span>));
+<span class="hljs-keyword">const</span> mediaUrls = compose(map(mediaUrl), prop(<span class="hljs-string">&apos;items&apos;</span>));
+<span class="hljs-keyword">const</span> images = compose(map(img), mediaUrls);
+</code></pre>
+<p>&#x628A;&#x6211;&#x4EEC;&#x7684; map &#x6392;&#x6392;&#x9F50;&#x3002;&#x591A;&#x4E8F;&#x4E86;&#x7B49;&#x5F0F;&#x63A8;&#x7406;&#xFF08;equational reasoning&#xFF09;&#x548C;&#x7EAF;&#x7CB9;&#x6027;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x628A;&#x5BF9; <code>mediaUrls</code> &#x7684;&#x8C03;&#x7528;&#x5185;&#x8054;&#x8FDB; <code>images</code> &#x91CC;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> mediaUrl = compose(prop(<span class="hljs-string">&apos;m&apos;</span>), prop(<span class="hljs-string">&apos;media&apos;</span>));
+<span class="hljs-keyword">const</span> images = compose(map(img), map(mediaUrl), prop(<span class="hljs-string">&apos;items&apos;</span>));
+</code></pre>
+<p>&#x73B0;&#x5728; <code>map</code> &#x6392;&#x597D;&#x4E86;&#xFF0C;&#x53EF;&#x4EE5;&#x5957;&#x7528;&#x7EC4;&#x5408;&#x5B9A;&#x5F8B;&#x4E86;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-comment">/*
+compose(map(f), map(g)) === map(compose(f, g));
+compose(map(img), map(mediaUrl)) === map(compose(img, mediaUrl));
+*/</span>
+
+<span class="hljs-keyword">const</span> mediaUrl = compose(prop(<span class="hljs-string">&apos;m&apos;</span>), prop(<span class="hljs-string">&apos;media&apos;</span>));
+<span class="hljs-keyword">const</span> images = compose(map(compose(img, mediaUrl)), prop(<span class="hljs-string">&apos;items&apos;</span>));
+</code></pre>
+<p>&#x8FD9;&#x4E0B;&#x8FD9;&#x6363;&#x86CB;&#x9B3C;&#x5728;&#x628A;&#x6BCF;&#x4E00;&#x9879;&#x53D8;&#x6210; img &#x65F6;&#x53EA;&#x4F1A;&#x5FAA;&#x73AF;&#x4E00;&#x6B21;&#x4E86;&#x3002;&#x54B1;&#x4EEC;&#x628A;&#x90A3;&#x4E2A;&#x51FD;&#x6570;&#x62BD;&#x51FA;&#x6765;&#xFF0C;&#x8BA9;&#x5B83;&#x518D;&#x597D;&#x8BFB;&#x4E00;&#x70B9;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> mediaUrl = compose(prop(<span class="hljs-string">&apos;m&apos;</span>), prop(<span class="hljs-string">&apos;media&apos;</span>));
+<span class="hljs-keyword">const</span> mediaToImg = compose(img, mediaUrl);
+<span class="hljs-keyword">const</span> images = compose(map(mediaToImg), prop(<span class="hljs-string">&apos;items&apos;</span>));
+</code></pre>
+<h2 id="&#x5C0F;&#x7ED3;">&#x5C0F;&#x7ED3;</h2>
+<p>&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x770B;&#x5230;&#x600E;&#x4E48;&#x628A;&#x65B0;&#x5B66;&#x7684;&#x672C;&#x4E8B;&#x7528;&#x5728;&#x4E00;&#x4E2A;&#x867D;&#x5C0F;&#x4F46;&#x771F;&#x5B9E;&#x7684;&#x73B0;&#x5B9E;&#x5E94;&#x7528;&#x4E0A;&#x3002;&#x6211;&#x4EEC;&#x7528;&#x6570;&#x5B66;&#x6846;&#x67B6;&#x6765;&#x63A8;&#x7406;&#x548C;&#x91CD;&#x6784;&#x4EE3;&#x7801;&#x3002;&#x53EF;&#x9519;&#x8BEF;&#x5904;&#x7406;&#x548C;&#x4EE3;&#x7801;&#x5206;&#x652F;&#x600E;&#x4E48;&#x529E;&#xFF1F;&#x600E;&#x4E48;&#x624D;&#x80FD;&#x8BA9;&#x6574;&#x4E2A;&#x5E94;&#x7528;&#x90FD;&#x662F;&#x7EAF;&#x7684;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4EC5;&#x4EC5;&#x7ED9;&#x7834;&#x574F;&#x6027;&#x51FD;&#x6570;&#x5957;&#x4E2A;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF1F;&#x600E;&#x4E48;&#x624D;&#x80FD;&#x8BA9;&#x5E94;&#x7528;&#x66F4;&#x5B89;&#x5168;&#x3001;&#x66F4;&#x6709;&#x8868;&#x8FBE;&#x529B;&#xFF1F;&#x8FD9;&#x4E9B;&#x5C31;&#x662F;&#x7B2C;&#x4E8C;&#x90E8;&#x5206;&#x8981;&#x89E3;&#x51B3;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<p><a href="ch07.html">&#x7B2C; 07 &#x7AE0;&#xFF1A;Hindley-Milner &#x4E0E;&#x6211;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ch05.html#练习" class="navigation navigation-prev " aria-label="Previous page: 练习">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ch06.html#声明式编程" class="navigation navigation-next " aria-label="Next page: 声明式编程">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第 06 章：示例应用","level":"1.7","depth":1,"next":{"title":"声明式编程","level":"1.7.1","depth":2,"anchor":"#声明式编程","path":"ch06.md","ref":"ch06.md#声明式编程","articles":[]},"previous":{"title":"练习","level":"1.6.6","depth":2,"anchor":"#练习","path":"ch05.md","ref":"ch05.md#练习","articles":[]},"dir":"ltr"},"config":{"plugins":["exercises@git+https://github.com/MostlyAdequate/plugin-exercises.git","include-codeblock@3.2.2"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"exercises":{},"include-codeblock":{"check":false,"edit":false,"lang":"","fixlang":false,"template":"default","theme":"chrome","unindent":false},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"cover":"images/cover.png","title":"Professor Frisby's Mostly Adequate Guide to Functional Programming（中文版）","gitbook":"3.2.2"},"file":{"path":"ch06.md","mtime":"2026-11-21T02:47:16.201Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2026-11-21T03:37:53.750Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook-plugin-exercises/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+    
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-exercises/ace/ace.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-exercises/ace/theme-tomorrow.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-exercises/ace/mode-javascript.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-exercises/exercises.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+
+    </body>
+</html>
+
